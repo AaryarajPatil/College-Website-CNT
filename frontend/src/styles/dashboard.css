@@ -1,0 +1,664 @@
+/* =========================================================
+   VIERP PREMIUM — BLACK & 24K GOLD EXECUTIVE WORKSPACE
+   ========================================================= */
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  position: relative;
+}
+
+/* Luxury Obsidian & Gold Ambient Atmosphere */
+.app-layout::before {
+  content: '';
+  position: fixed;
+  top: -100px;
+  right: -50px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, rgba(245, 212, 120, 0.02) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.main-viewport {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.page-container {
+  flex: 1;
+  padding: 24px 32px 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* =========================================================
+   EXECUTIVE TOP NAVBAR (Black & Gold Master Header)
+   ========================================================= */
+.top-navbar {
+  height: 60px;
+  background: rgba(12, 12, 18, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.75);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1;
+  max-width: 540px;
+}
+
+.brand-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.brand-logo-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: var(--gold-gradient-metallic);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #080705;
+  font-weight: 900;
+  font-size: 14px;
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.brand-pill {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 1px 7px;
+  background: var(--gold-gradient);
+  color: #080705;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
+}
+
+.navbar-breadcrumb-divider {
+  color: rgba(212, 175, 55, 0.35);
+  font-size: 16px;
+}
+
+.navbar-breadcrumb-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* =========================================================
+   SUB-NAVIGATION (Workspace Module Tabs)
+   ========================================================= */
+.workspace-tabs-bar {
+  background: rgba(16, 16, 24, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 60px;
+  z-index: 40;
+  overflow-x: auto;
+}
+
+.workspace-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.workspace-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  position: relative;
+  cursor: pointer;
+}
+
+.workspace-tab-btn:hover {
+  color: var(--gold-bright);
+  background: rgba(212, 175, 55, 0.06);
+}
+
+.workspace-tab-btn.active {
+  color: var(--gold-bright);
+  border-bottom-color: var(--gold-primary);
+  font-weight: 800;
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.1) 0%, transparent 100%);
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+}
+
+.workspace-tab-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.workspace-tab-btn.active .workspace-tab-badge {
+  background: rgba(212, 175, 55, 0.22);
+  color: var(--gold-bright);
+  border-color: rgba(212, 175, 55, 0.45);
+}
+
+/* =========================================================
+   HERO / EXECUTIVE ACADEMIC IDENTITY CARD
+   ========================================================= */
+.academic-identity-row {
+  background: linear-gradient(135deg, rgba(24, 24, 34, 0.95) 0%, rgba(18, 18, 26, 0.92) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 22px 28px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8), 0 0 25px rgba(212, 175, 55, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.academic-identity-row::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.identity-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.identity-avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  border: 2px solid var(--gold-primary);
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.45);
+  flex-shrink: 0;
+}
+
+.identity-info {
+  min-width: 0;
+}
+
+.identity-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.identity-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.identity-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+
+.identity-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.gpa-pill-widget {
+  background: linear-gradient(135deg, rgba(34, 30, 18, 0.95) 0%, rgba(20, 18, 12, 0.9) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5), inset 0 0 12px rgba(212, 175, 55, 0.1);
+}
+
+.gpa-pill-val {
+  font-size: 22px;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: var(--gold-bright);
+  line-height: 1;
+}
+
+.gpa-pill-label {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+/* =========================================================
+   ACADEMIC SNAPSHOT (Integrated 5-Column Matrix)
+   ========================================================= */
+.academic-snapshot-bar {
+  background: var(--bg-surface);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 18px 22px;
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  box-shadow: var(--shadow-card);
+}
+
+.snapshot-segment {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-right: 14px;
+  border-right: 1px solid rgba(212, 175, 55, 0.15);
+  transition: all var(--transition-fast);
+}
+
+.snapshot-segment:hover {
+  transform: translateY(-1px);
+}
+
+.snapshot-segment:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.snapshot-segment-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.snapshot-segment-value {
+  font-size: 19px;
+  font-weight: 800;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.snapshot-segment-sub {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+}
+
+.micro-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.micro-progress-fill {
+  height: 100%;
+  background: var(--gold-gradient);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+  transition: width 0.6s ease;
+}
+
+/* =========================================================
+   ASYMMETRIC 2-COLUMN WORKSPACE GRID
+   ========================================================= */
+.workspace-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  align-items: start;
+}
+
+.workspace-main-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+.workspace-side-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* =========================================================
+   SECTION HEADERS
+   ========================================================= */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.section-header-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-header-link {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--gold-bright);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.section-header-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(245, 212, 120, 0.5);
+}
+
+/* =========================================================
+   HORIZONTAL PROJECT CARDS (Black & Gold Master Cards)
+   ========================================================= */
+.project-card-horizontal {
+  background: rgba(18, 18, 26, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all var(--transition-fast);
+}
+
+.project-card-horizontal:hover {
+  border-color: rgba(245, 212, 120, 0.6);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8), 0 0 16px rgba(212, 175, 55, 0.16);
+  transform: translateY(-1px);
+}
+
+.project-row-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-title-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.project-name-link {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-desc-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-row-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+/* =========================================================
+   DEADLINES WIDGET
+   ========================================================= */
+.deadline-item-compact {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 11px 14px;
+  background: rgba(22, 22, 32, 0.75);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.deadline-item-compact:hover {
+  background: rgba(26, 26, 38, 0.95);
+  border-color: rgba(245, 212, 120, 0.45);
+  transform: translateX(2px);
+}
+
+.deadline-item-compact.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+/* =========================================================
+   VERTICAL ACTIVITY TIMELINE
+   ========================================================= */
+.activity-timeline-clean {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  padding-left: 24px;
+}
+
+.activity-timeline-clean::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--gold-primary) 0%, rgba(212, 175, 55, 0.1) 100%);
+}
+
+.timeline-entry {
+  position: relative;
+}
+
+.timeline-entry-dot {
+  position: absolute;
+  left: -24px;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 2px solid var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.timeline-entry-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.timeline-entry-desc {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  margin-top: 1px;
+}
+
+.timeline-entry-time {
+  font-size: 11px;
+  color: var(--gold-bright);
+  font-family: var(--font-mono);
+  margin-top: 3px;
+}
+
+/* =========================================================
+   RESEARCH SUMMARY COMPACT
+   ========================================================= */
+.research-row-compact {
+  padding: 12px 14px;
+  background: rgba(22, 22, 32, 0.75);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all var(--transition-fast);
+}
+
+.research-row-compact:hover {
+  background: rgba(26, 26, 38, 0.95);
+  border-color: rgba(245, 212, 120, 0.45);
+}
+
+/* =========================================================
+   RESPONSIVENESS
+   ========================================================= */
+@media (max-width: 1080px) {
+  .workspace-grid {
+    grid-template-columns: 1fr;
+  }
+  .academic-snapshot-bar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .snapshot-segment:nth-child(3) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 16px;
+  }
+  .top-navbar {
+    padding: 0 16px;
+  }
+  .workspace-tabs-bar {
+    padding: 0 16px;
+  }
+  .academic-identity-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px;
+  }
+  .identity-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .academic-snapshot-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .academic-snapshot-bar {
+    grid-template-columns: 1fr;
+  }
+  .snapshot-segment {
+    border-right: none;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    padding-bottom: 10px;
+  }
+}

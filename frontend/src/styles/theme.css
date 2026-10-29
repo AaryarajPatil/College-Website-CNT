@@ -1,0 +1,105 @@
+:root {
+  /* =========================================================
+     VIERP PREMIUM — OBSIDIAN BLACK & 24K GOLD LUXURY SYSTEM
+     ========================================================= */
+
+  /* Backgrounds & Surfaces (Default: Obsidian Black) */
+  --bg-primary: #07070a;
+  --bg-secondary: #0e0e14;
+  --bg-surface: #13131b;
+  --bg-surface-elevated: #191924;
+  --bg-surface-hover: #1e1e2d;
+  --bg-glass: rgba(19, 19, 27, 0.88);
+  --bg-glass-strong: rgba(22, 22, 32, 0.96);
+  --bg-glass-modal: rgba(14, 14, 20, 0.98);
+
+  /* Typography */
+  --text-primary: #fcfaf5;        /* Warm Platinum White */
+  --text-secondary: #aaa393;      /* Champagne Muted Slate */
+  --text-muted: #6b665c;          /* Muted Gray */
+  --text-gold: #f5d478;           /* 24K Gold Text */
+  --text-gold-bright: #ffe699;    /* Bright Gold */
+
+  /* 24K Gold Master System */
+  --gold-primary: #d4af37;
+  --gold-bright: #f5d478;
+  --gold-vivid: #ffd700;
+  --gold-pale: #fdf5d6;
+  --gold-dark: #8c6e1e;
+  --gold-deep: #4d3c0d;
+  --gold-light: rgba(212, 175, 55, 0.14);
+  --gold-soft: rgba(212, 175, 55, 0.08);
+
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(212, 175, 55, 0.22);
+  --border-card-hover: rgba(245, 212, 120, 0.6);
+  --border-active: #f5d478;
+
+  /* Gradients */
+  --gold-gradient: linear-gradient(135deg, #f5d478 0%, #d4af37 50%, #9e791b 100%);
+  --gold-gradient-hover: linear-gradient(135deg, #fdf5d6 0%, #f5d478 40%, #d4af37 100%);
+  --gold-gradient-metallic: linear-gradient(135deg, #8c6e1e 0%, #f5d478 28%, #d4af37 55%, #ffd700 80%, #8c6e1e 100%);
+  --gold-gradient-subtle: linear-gradient(135deg, rgba(212, 175, 55, 0.16) 0%, rgba(245, 212, 120, 0.04) 100%);
+
+  /* Glow Effects */
+  --gold-glow: 0 0 24px rgba(212, 175, 55, 0.38);
+  --gold-glow-strong: 0 0 45px rgba(245, 212, 120, 0.55);
+  --gold-border: 1px solid rgba(212, 175, 55, 0.28);
+  --gold-border-bright: 1px solid rgba(245, 212, 120, 0.65);
+
+  /* Status Accents */
+  --status-success: #10b981;
+  --status-warning: #f59e0b;
+  --status-danger: #ef4444;
+  --status-info: #38bdf8;
+  --status-purple: #c084fc;
+
+  /* Typography Fonts */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Luxury Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 10px 30px -8px rgba(0, 0, 0, 0.8), 0 0 18px rgba(212, 175, 55, 0.06);
+  --shadow-card-hover: 0 18px 45px -10px rgba(0, 0, 0, 0.92), 0 0 28px rgba(212, 175, 55, 0.22);
+  --shadow-modal: 0 30px 70px -15px rgba(0, 0, 0, 0.98), 0 0 45px rgba(212, 175, 55, 0.2);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Light Mode Accent fallback if toggled */
+[data-theme='light'] {
+  --bg-primary: #fcfaf5;
+  --bg-secondary: #f4eee0;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #fcf9f0;
+  --bg-surface-hover: #f7f1e4;
+  --bg-glass: rgba(255, 255, 255, 0.92);
+  --bg-glass-strong: rgba(255, 255, 255, 0.98);
+  --bg-glass-modal: rgba(255, 255, 255, 0.99);
+
+  --text-primary: #12100b;
+  --text-secondary: #594f3b;
+  --text-muted: #8c7e65;
+  --text-gold: #9e791b;
+  --text-gold-bright: #785a0d;
+
+  --border-subtle: rgba(140, 110, 30, 0.15);
+  --border-card: rgba(212, 175, 55, 0.25);
+  --border-card-hover: rgba(212, 175, 55, 0.65);
+
+  --shadow-card: 0 4px 20px -4px rgba(140, 110, 30, 0.1);
+  --shadow-card-hover: 0 12px 35px -8px rgba(212, 175, 55, 0.28);
+}
